@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-u8">
+	<title></title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+	<div id="contacts">
+		<header>
+			<div id="filter"><label>Show me:</label></div>
+		</header>
+
+	</div>
+
+	<script id="contactTemplate" type="text/template">
+		<img src="<%= photo %>" alt="<%= name %>" />
+		<h1><%= name %><span><%= type %></span></h1>
+		<div><%= address %></div>
+		<dl>
+			<dt>Tel:</dt><dd><%= tel %></dd>
+			<dt>Email:</dt><dd><a href="mailto:<%= email %>"><%= email %></a></dd>
+		</dl>
+	</script>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://underscorejs.org/underscore-min.js"></script>
+	<script src="http://backbonejs.org/backbone-min.js"></script>
+
+	<script src="assets/js/scripts.js"></script>
+
+</body>
+</html>
