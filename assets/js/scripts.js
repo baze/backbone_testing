@@ -16,7 +16,12 @@
 	//define product model
 	var Contact = Backbone.Model.extend({
     	defaults: {
-    		photo: "assets/img/placeholder.png"
+    		photo: "assets/img/placeholder.png",
+			name: "",
+			address: "",
+			tel: "",
+			email: "",
+			type: ""
     	}
 	});
 
@@ -49,10 +54,14 @@
 			this.$el.find("#filter").append(this.createSelect());
 
 			this.on("change:filterType", this.filterByType, this);
+
 			this.collection.on("reset", this.render, this);
+			this.collection.on("add", this.render, this);
 		},
 
 		render: function() {
+			this.$el.find("article").remove();
+			
 			var that = this;
 			_.each(this.collection.models, function(item) {
 				that.renderContact(item);
@@ -88,7 +97,9 @@
 		},
 
 		events: {
-			"change #filter select": "setFilter"
+			"change #filter select": "setFilter",
+			"click #add": "addContact",
+			"click #showForm": "showForm"
 		},
 
 		setFilter: function(e) {
@@ -97,8 +108,6 @@
 		},
 
 		filterByType: function() {
-			this.$el.find("article").remove();
-
 			if (this.filterType === "all") {
 				this.collection.reset(contacts);
 				contactsRouter.navigate("filter/all");
@@ -114,6 +123,30 @@
 
 				contactsRouter.navigate("filter/" + filterType);
 			}
+		},
+
+		addContact: function(e) {
+			e.preventDefault();
+
+			var formData = {};
+			$("#addContact").children("input").each(function(i, el) {
+				if ($(el).val() !== "") {
+					formData[el.id] = $(el).val();
+				}
+			});
+
+			contacts.push(formData);
+
+			if (_.indexOf(this.getTypes(), formData.type) === -1) {
+				this.collection.add(new Contact(formData));
+				this.$el.find("#filter").find("select").remove().end().append(this.createSelect());
+			} else {
+				this.collection.add(new Contact(formData));
+			}
+		},
+
+		showForm: function() {
+			this.$el.find("#addContact").slideToggle();
 		}
 	});
 
@@ -129,6 +162,7 @@
 	});
 
 	var directory = new DirectoryView();
+
 	var contactsRouter = new ContactsRouter();
 
 	Backbone.history.start();

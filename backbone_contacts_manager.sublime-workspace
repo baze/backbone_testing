@@ -4,6 +4,78 @@
 		"selected_items":
 		[
 			[
+				"cree",
+				"createSelect"
+			],
+			[
+				"Cont",
+				"Contact"
+			],
+			[
+				"add",
+				"add"
+			],
+			[
+				"filter",
+				"filterType"
+			],
+			[
+				"filt",
+				"filterType"
+			],
+			[
+				"url",
+				"urlFilter"
+			],
+			[
+				"fil",
+				"filtered"
+			],
+			[
+				"mo",
+				"models"
+			],
+			[
+				"eve",
+				"events"
+			],
+			[
+				"cre",
+				"createSelect"
+			],
+			[
+				"to",
+				"toLowerCase"
+			],
+			[
+				"pl",
+				"pluck"
+			],
+			[
+				"co",
+				"collection"
+			],
+			[
+				"li",
+				"link"
+			],
+			[
+				"Dire",
+				"DirectoryView"
+			],
+			[
+				"Conta",
+				"ContactView"
+			],
+			[
+				"conta",
+				"contacts"
+			],
+			[
+				"v",
+				"View"
+			],
+			[
 				"fun",
 				"function"
 			],
@@ -35,20 +107,56 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1342,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/js/scripts.js",
+			"settings":
+			{
+				"buffer_size": 4565,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/css/style.css",
+			"settings":
+			{
+				"buffer_size": 1609,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 67.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
-				"insta",
+				"git s",
+				"Git: Status"
+			],
+			[
+				"git",
+				"Git: Init"
+			],
+			[
+				"git in",
+				"Git: Init"
+			],
+			[
+				"install",
 				"Package Control: Install Package"
 			],
 			[
-				"git s",
-				"Git: Status"
+				"insta",
+				"Package Control: Install Package"
 			],
 			[
 				"gitco",
@@ -61,10 +169,6 @@
 			[
 				"git com",
 				"Git: Commit"
-			],
-			[
-				"install",
-				"Package Control: Install Package"
 			],
 			[
 				"install ",
@@ -92,6 +196,9 @@
 	},
 	"file_history":
 	[
+		"/Users/bjoernmartensen/Sites/testing/backbone_contacts_manager/index.html",
+		"/Users/bjoernmartensen/Sites/testing/backbone_contacts_manager/assets/css/style.css",
+		"/Users/bjoernmartensen/Downloads/demo-1/css/screen.css",
 		"/Users/bjoernmartensen/Sites/testing/backbone/index.html",
 		"/Users/bjoernmartensen/Sites/doggroom/sftp-config.json",
 		"/Users/bjoernmartensen/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/doggroom.de",
@@ -114,6 +221,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"route",
 			"ouml"
 		],
 		"highlight": true,
@@ -132,8 +240,97 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 1342,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								719,
+								719
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/js/scripts.js",
+					"settings":
+					{
+						"buffer_size": 4565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3817,
+								3817
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3541.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "assets/css/style.css",
+					"settings":
+					{
+						"buffer_size": 1609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1609,
+								1609
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -205,6 +402,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 185.0,
 	"status_bar_visible": true
 }
