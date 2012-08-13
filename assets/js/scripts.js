@@ -73,6 +73,7 @@
 
 			this.collection.on("reset", this.render, this);
 			this.collection.on("add", this.render, this);
+			this.collection.on("remove", this.removeContact, this);
 		},
 
 		render: function() {
@@ -159,6 +160,20 @@
 			} else {
 				this.collection.add(new Contact(formData));
 			}
+		},
+
+		removeContact: function (removedModel) {
+			var removed = removedModel.attributes;
+
+			if (removed.photo === "/img/placeholder.png") {
+				delete removed.photo;
+			}
+
+			_.each(contacts, function (contact) {
+				if (_.isEqual(contact, removed)) {
+					contacts.splice(_.indexOf(contacts, contact), 1);
+				}
+			});
 		},
 
 		showForm: function() {
